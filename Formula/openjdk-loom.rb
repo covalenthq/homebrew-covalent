@@ -24,11 +24,6 @@ class OpenjdkLoom < Formula
 
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
-  livecheck do
-    url :stable
-    regex(/^jdk[._-]v?(\d+(?:\.\d+)*)-ga$/i)
-  end
-
   keg_only :shadowed_by_macos
 
   on_linux do
