@@ -1,6 +1,6 @@
 class OpenjdkLoom < Formula
   desc "Development kit for the Java programming language"
-  homepage "http://jdk.java.net/loom/"
+  homepage "https://jdk.java.net/loom/"
   version "18.2.74"
 
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
