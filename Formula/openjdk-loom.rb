@@ -27,24 +27,7 @@ class OpenjdkLoom < Formula
       url "https://download.java.net/java/early_access/loom/2/openjdk-18-loom+2-74_linux-x64_bin.tar.gz", using: :nounzip
       sha256 "7cee3ff133f6a15df3510dabf33871c206aa20a8e5cc08581f7281bf1a7835d0"
     end
-
-    depends_on "alsa-lib"
-    depends_on "cups"
-    depends_on "fontconfig"
-    depends_on "gcc"
-    depends_on "libx11"
-    depends_on "libxext"
-    depends_on "libxrandr"
-    depends_on "libxrender"
-    depends_on "libxt"
-    depends_on "libxtst"
-    depends_on "unzip"
-    depends_on "zip"
-
-    ignore_missing_libraries "libjvm.so"
   end
-
-  fails_with gcc: "5"
 
   def install
     dist_tarball = Pathname.pwd.children.find { |f| f.file? && f.basename.to_s =~ /\.tar\.gz$/ }
