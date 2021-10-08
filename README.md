@@ -1,4 +1,4 @@
-# Covalenthq Covalent
+# Covalent Homebrew tap
 
 ## How do I install these formulae?
 
