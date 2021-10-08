@@ -7,7 +7,7 @@ cask "openjdk-loom" do
 
   version "#{version_major}.#{version_minor}.#{version_patch}"
 
-  url "https://download.java.net/java/early_access/loom/#{version_minor}/openjdk-#{version_major}-loom+#{version_minor}-#{version_patch}_macos-#{arch}_bin.tar.gz", verified: "https://download.java.net/java/early_access/loom"
+  url "https://download.java.net/java/early_access/loom/#{version_minor}/openjdk-#{version_major}-loom+#{version_minor}-#{version_patch}_macos-#{arch}_bin.tar.gz"
   if Hardware::CPU.intel?
     sha256 "8350da9ceb94beae89de4c7d124a2fad8e7dfc62ed39af8a36ca296bda5ae08f"
   else
