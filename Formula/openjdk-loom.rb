@@ -4,6 +4,9 @@ class OpenjdkLoom < Formula
   version "18.2.74"
 
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
+
+  bottle :disable, "Loom JDK is already installed from a binary distribution"
+
   keg_only :shadowed_by_macos
 
   on_macos do
