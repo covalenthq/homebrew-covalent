@@ -90,15 +90,18 @@ class OpenjdkLoom < Formula
 
   test do
     (testpath/"HelloWorld.java").write <<~EOS
+      import java.util.concurrent.Executors;
+      import java.util.concurrent.ExecutorService;
+
       class HelloWorld {
         public static void main(String args[]) {
+          final ExecutorService actorPool = Executors.newVirtualThreadExecutor();
+
           System.out.println("Hello, world!");
         }
       }
     EOS
 
     system bin/"javac", "HelloWorld.java"
-
-    assert_match "Hello, world!", shell_output("#{bin}/java HelloWorld")
   end
 end
