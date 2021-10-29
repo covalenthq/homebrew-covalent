@@ -1,9 +1,9 @@
 class Orbital < Formula
   desc "Covalent ops tooling"
   homepage "https://github.com/covalenthq/orbital"
-  url "https://github.com/covalenthq/orbital/archive/refs/tags/v1.0.7.zip"
-  version "1.0.7"
-  sha256 "e4c6f94fe78d25015dfea5f5ad37eb1ffd79ef7a92057d604e20fded4872f22d"
+  url "https://github.com/covalenthq/orbital/archive/refs/tags/v1.0.8.zip"
+  version "1.0.8"
+  sha256 "b9131142c79c1b233eff11a04324ea0597442693e84a08e82af22a14099caadc"
   license "MIT"
   revision 1
 
@@ -237,13 +237,20 @@ class Orbital < Formula
 
   def install
     ENV["GEM_HOME"] = libexec
+    ENV["GEM_PATH"] = libexec
+
     resources.each do |r|
       system "gem", "install", r.cached_download, "--ignore-dependencies",
              "--no-document", "--install-dir", libexec
     end
+
     system "gem", "build", "orbital.gemspec"
-    system "gem", "install", "orbital-#{version}.gem"
-    bin.install Dir[libexec/"exe/orbital"]
-    bin.env_script_all_files(libexec/"exe", GEM_HOME: ENV["GEM_HOME"])
+    system "gem", "install", "orbital-#{version}.gem", "--no-document"
+
+    (bin/"orbital").write_env_script libexec/"bin/orbital",
+      PATH:                            "#{Formula["ruby"].opt_bin}:#{libexec}/bin:$PATH",
+      ORBITAL_INSTALLED_VIA_HOMEBREW:  "true",
+      GEM_HOME:                        libexec.to_s,
+      GEM_PATH:                        libexec.to_s
   end
 end
