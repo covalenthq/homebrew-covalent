@@ -6,6 +6,13 @@ class Orbital < Formula
   license "MIT"
   revision 1
 
+  bottle do
+    root_url "https://github.com/covalenthq/homebrew-covalent/releases/download/orbital-1.0.8_1"
+    rebuild 1
+    sha256 cellar: :any,                 catalina:     "f7b8096e827df1112396bff92e2618cb0236c410ae6d930cce626efa2a6283f4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7b87e8eb59e5a2698c736b23b78bab24c86c6ca487dce0e55a10dee6224e59bd"
+  end
+
   depends_on "ruby"
 
   def install
