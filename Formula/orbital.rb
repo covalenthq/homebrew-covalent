@@ -1,9 +1,9 @@
 class Orbital < Formula
   desc "Covalent ops tooling"
   homepage "https://github.com/covalenthq/orbital"
-  url "https://github.com/covalenthq/orbital/archive/refs/tags/v1.0.6.zip"
-  version "1.0.6"
-  sha256 "f9ca04c92909ce4877fc6b6c21ddffc43387cad54223fa8b26971dbdc2b6293c"
+  url "https://github.com/covalenthq/orbital/archive/refs/tags/v1.0.7.zip"
+  version "1.0.7"
+  sha256 "e4c6f94fe78d25015dfea5f5ad37eb1ffd79ef7a92057d604e20fded4872f22d"
   license "MIT"
   revision 1
 
@@ -101,8 +101,8 @@ class Orbital < Formula
   end
 
   resource "kustomizer" do
-    url "https://rubygems.org/gems/kustomizer-0.1.15.gem"
-    sha256 "384b2ad6d4a6d1076245acdefd6b1885faefee22a2c0317edecdb0d48a405457"
+    url "https://rubygems.org/gems/kustomizer-0.1.17.gem"
+    sha256 "3da8b7bb626894025c920f756aa3510a6a0fe3d2c4c89fb4b3a32ad899de4b5f"
   end
 
   resource "minitest" do
