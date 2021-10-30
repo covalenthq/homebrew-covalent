@@ -1,8 +1,8 @@
 class Orbital < Formula
   desc "Covalent ops tooling"
   homepage "https://github.com/covalenthq/orbital"
-  url "https://github.com/covalenthq/orbital/archive/refs/tags/v1.0.8.tar.gz"
-  sha256 "b6fa97c1250f58239683a6ae20f351e9fd3ce1ea5d3651d9080bb572604df485"
+  url "https://github.com/covalenthq/orbital/archive/refs/tags/v1.0.9.tar.gz"
+  sha256 "2c26ce9f6d0673886a71c523e8421a5c3bff4192c8def346d4dab977dc6ba08c"
   license "MIT"
   revision 1
 
@@ -18,7 +18,7 @@ class Orbital < Formula
     end
 
     system "gem", "build", "orbital.gemspec"
-    system "gem", "install", "orbital-1.0.8.gem", "--no-document"
+    system "gem", "install", "orbital-1.0.9.gem", "--no-document"
 
     env_vars = {
       PATH:                           "#{Formula["ruby"].opt_bin}:#{libexec}/bin:$PATH",
