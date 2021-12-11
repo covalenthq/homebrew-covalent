@@ -7,7 +7,9 @@ cask "openjdk-loom" do
 
   version "#{version_major}.#{version_minor}.#{version_patch}"
 
-  url "https://pkgmirror.covalenthq.com/loom/openjdk-#{version_major}-loom+#{version_minor}-#{version_patch}_macos-#{arch}_bin.tar.gz", verified: true
+  url "https://pkgmirror.covalenthq.com/loom/openjdk-#{version_major}-loom+#{version_minor}-#{version_patch}_macos-#{arch}_bin.tar.gz",
+    verified: "https://pkgmirror.covalenthq.com/loom"
+
   if Hardware::CPU.intel?
     sha256 "cafc5626122a198445f372216a1bbf809ca01252a82e0787dd866130ab6d391c"
   else
