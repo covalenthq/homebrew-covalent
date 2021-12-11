@@ -18,7 +18,7 @@ class Orbital < Formula
     end
 
     system "gem", "build", "orbital.gemspec"
-    system "gem", "install", "orbital-1.0.10.gem", "--no-document"
+    system "gem", "install", "orbital-1.0.11.gem", "--no-document"
 
     env_vars = {
       PATH:                           "#{Formula["ruby"].opt_bin}:#{libexec}/bin:$PATH",
