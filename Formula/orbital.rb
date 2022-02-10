@@ -7,9 +7,9 @@ class Orbital < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/covalenthq/homebrew-covalent/releases/download/orbital-1.0.11_1"
-    sha256 cellar: :any,                 big_sur:      "e57cc9dcadd779250a4cafb1e7b484cef71ebdc3b88fd89685b33d2cbcc61678"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "855d4dc94104cfd0757b2c2331c2df0bb046a8fc46d8571cd79c79408d2bdff8"
+    root_url "https://github.com/covalenthq/homebrew-covalent/releases/download/orbital-1.0.12_1"
+    sha256 cellar: :any,                 big_sur:      "7d925269a7a816ca918876c2b1d34e41c858e0441c671b687df9376a0c31fe17"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "006b1a5a5ea540bbffa3ba55846e0c82fd968355c8ab4acfd7dfb56cbac59089"
   end
 
   depends_on "ruby"
