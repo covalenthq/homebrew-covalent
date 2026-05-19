@@ -10,7 +10,7 @@ cask "openjdk-loom" do
          arm:   "c7711a2183ded8a543d36b16771febc01d2fc3c9f85432b597d6741911b96c16"
 
   url "https://pkgmirror.covalenthq.com/loom/openjdk-#{version_major}-loom+#{version_minor}-#{version_patch}_macos-#{arch}_bin.tar.gz",
-      verified: "https://pkgmirror.covalenthq.com/loom"
+      verified: "pkgmirror.covalenthq.com/loom"
   name "OpenJDK Development Kit Project Loom EA Release"
   desc "Development kit for the Java programming language"
   homepage "https://jdk.java.net/loom/"
